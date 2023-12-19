@@ -1,117 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>portofolio saya</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Lingkaran</title>
+
+    <!-- style css -->
+    <style>
+        body { text-align: center; }
+    </style>
 </head>
-
 <body>
-<header>
-<h1>Welcome in my profil</h1>
-</header>
-<main>
-<section>
-    <h2>Informasi Pribadi</h2>
-</section>
-</main>
-</body>
-
-<ul>
-      <li>Nama    : <b>Tasya Aurellya Amanda</b></li>
-      <li>Nim     : <b>0110123299</b></li>
-      <li>Rombel  : <b>SI10</b></li>
-      <li>Prodi   : <b>Sistem Informasi</b></li>
-      <li>Email   : <b>@tasyaaurellya6@gmail.com</b></li>
-      <li>Linkedln: <b>https://www.linkedin.com/in/aurellya-amanda-b02551293</b></li>
-</ul>
-
-<section>
-    <h2>My Gallery Whislist</h2>
-    <h6>ini adalah halaman gallery yang menampilkan daftar kota favorit saya yang ada di indonesia</h6>
-    <h2>Foto Kota Favorit</h2>
-    <img
-    src= "kotabogor jpg"
-    alt="gambar_Kota Bogor"
-    style="width:200px;height:100px;"/>
+    <h2>Menghitung Luas & Keliling Lingkaran</h2>
+    <br>
+    <span>Masukan Jari-jari </span><input type="number" id="jari">
+    <button onclick="hitung()">Hitung</button>
+    <p id="luasHasil"></p>
+    <p id="kelilingHasil"></p>
     
-    <img
-    src="kotabandung.jpg"
-    alt="gambar_kota_Bandung"
-    style="width:200px;height:100px:">
-    
-    <img 
-    src="kotajogjaa.jpg" 
-    alt="gambar_kota_jogjaa"
-    style="width: 200px;height:100px:"/>
-    
-    <img 
-    src="kotadepok.jpg"
-    alt="gambar_kota_depok"
-    style="width: 200px;height:100px"/>
-    
-    <img 
-    src="kotajakarta.jpg" 
-    alt="gambar_kota_jakarta" 
-    style="width:200px;height:100px"/>
-    
-    <img 
-    src="kotapalembang.jpg" 
-    alt="gambar_kota_pelembang"
-    style="width:200px;height:100px"/>
-    
-    
-        
+    <!-- javascript -->
+    <script>
+        function hitung() {
+            const phi = 3.14
+            let r = document.getElementById("jari").value
+            //luas lingkaran
+            let luasHasil = document.getElementById("luasHasil")
+            let luas = phi * (r * r)
+            luasHasil.innerText = "Luas Lingkaran : " + luas + " cm2"
+            //keliling lingkaran
+            let kelilingHasil = document.getElementById("kelilingHasil")
+            let keliling = 2 * phi * r
+            kelilingHasil.innerHTML = "Keliling Lingkaran : " + keliling + " cm"
+        }
     </script>
-</section>
-
-<section>
-    <h2>Informasi Kota Favorit</h2>
-    <table border="1">
-        <tr>
-            <th>Nama Kota</th>
-            <th>Icon Kota</th>
-            <th>Jumlah Penduduk</th>
-            <th>Keunikan</th>
-        </tr>
-        <tr>
-            <td>Bogor</td>
-            <td>Tugu Kujang</td>
-            <td>10.679.951 Jiwa</td>
-            <td>Kota Metropolitan</td>
-        </tr>
-        <tr>
-            <td>Bandung</td>
-            <td>Gedung Sate</td>
-            <td>2.469.589 Jiwa</td>
-            <td>Kota Kembang</td>
-        </tr>
-        <tr>
-            <td>Jogja</td>
-            <td>Tugu Jogja</td>
-            <td>455.535 Jiwa</td>
-            <td>Kota Pelajar</td>
-            </tr>
-            <tr>
-                <td>Depok</td>
-                <td>Kota Belimbing</td>
-                <td>2.085.935</td>
-                <td>Kota Belimbing</td>
-            </tr>
-            <tr>
-                <td>Jakarta</td>
-                <td>Monas</td>
-                <td>10.679.951 Jiwa</td>
-                <td>Kota Metropolitan</td>
-            </tr>
-            <tr>
-                <td>Palembang</td>
-                <td>Jembatan Ampera</td>
-                <td>1.686.073</td>
-                <td>Pempek</td>
-            </tr>
-    </table>
-    </section>
-    <footer>
-        <p>2023 Aurellya</p>
-    </footer>
+</body>
 </html>
